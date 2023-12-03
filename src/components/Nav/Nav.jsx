@@ -54,7 +54,15 @@ const Nav = () => {
           ></DropdownMenu>
         </li>
         <li>
-          <NavLink>Реестр</NavLink>
+        <DropdownMenu
+        title={"____Реестр____"}
+            options={[
+              { value: "/reestr/spisok-chlenov", label: "Список членов объединения" },
+              { value: "/reestr/slps", label: "Список людей получивших сертификат" },
+              { value: "/reestr/sok", label: "Список оценочных компаний" },
+              { value: "/reestr/soip", label: "Список оценщиков ИП" },
+            ]}
+          ></DropdownMenu>
         </li>
         <li>
           <NavLink>НПА</NavLink>

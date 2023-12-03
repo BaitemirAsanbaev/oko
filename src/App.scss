@@ -6,6 +6,7 @@
   text-decoration: none;
   list-style-type: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 .page{
   margin: 40px auto;
@@ -21,5 +22,13 @@
   }
   >p{
     margin: 60px 0;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  >ul{
+    align-self: flex-start;
+    li{
+      list-style-type: disc;
+    }
   }
 }

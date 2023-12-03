@@ -12,6 +12,7 @@ import VacancyForm from "./pages/VacancyForm/VacancyForm";
 import Courses from "./pages/Courses/Courses";
 import CourseInfo from "./pages/CourseInfo/CourseInfo";
 import CourseForm from "./pages/CourseForm/CourseForm";
+import SpisokChlenov from "./pages/SpisokChlenov/SpisokChlenov";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/course/:id" element={<CourseInfo />} />
           <Route path="/course/form" element={<CourseForm />} />
+          <Route path="/reestr/spisok-chlenov" element={<SpisokChlenov />} />
         </Routes>
       </Layout>
     </>
