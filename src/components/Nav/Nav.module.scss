@@ -1,3 +1,27 @@
-.Nav{
-      background-color: aliceblue;
+.Nav {
+  background-color: #1c274c;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: stretch;
+  a,
+  * {
+    color: #fff;
+  }
+  .logo {
+    border-radius: 50%;
+    width: 70px;
+  }
+  > div,
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .social{
+    img{
+      margin: 0 10px;
+    }
+  }
 }
