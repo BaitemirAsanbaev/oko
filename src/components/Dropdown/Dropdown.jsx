@@ -2,7 +2,7 @@ import React from "react";
 import Select from "react-select";
 import classes from "./Dropdown.module.scss";
 import { useNavigate } from "react-router-dom";
-const DropdownMenu = ({ options }) => {
+const DropdownMenu = ({ options, title }) => {
   const customStyles = {
     control: (provided) => ({
       ...provided,
@@ -21,7 +21,7 @@ const DropdownMenu = ({ options }) => {
     <Select
       className={classes.DropdownMenu}
       options={options}
-      placeholder="Члены объединения"
+      placeholder={title}
       styles={customStyles}
       onChange={(e)=>navigate(e.value)}
     />

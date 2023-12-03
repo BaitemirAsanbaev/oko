@@ -35,15 +35,23 @@ const Nav = () => {
           <NavLink to={"/about"}>О нас</NavLink>
         </li>
         <li>
-          <DropdownMenu options={[
-  { value: '/members/1', label: 'Члены объединения 1' },
-  { value: '/members/2', label: 'Члены объединения 2' },
-  { value: '/members/3', label: 'Члены объединения 3' },
-]}>
-          </DropdownMenu>
+          <DropdownMenu
+        title={"Члены объединения"}
+            options={[
+              { value: "/members/1", label: "Члены объединения 1" },
+              { value: "/members/2", label: "Члены объединения 2" },
+              { value: "/members/3", label: "Члены объединения 3" },
+            ]}
+          ></DropdownMenu>
         </li>
         <li>
-          <NavLink>Новости</NavLink>
+        <DropdownMenu
+        title={"Новости"}
+            options={[
+              { value: "/news", label: "Новости" },
+              { value: "/vacancies", label: "Вакансии" }
+            ]}
+          ></DropdownMenu>
         </li>
         <li>
           <NavLink>Реестр</NavLink>
