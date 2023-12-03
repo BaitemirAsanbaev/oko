@@ -6,12 +6,12 @@ export default function News() {
     <div className={`page ${classes.News}`}>
       <h1>Последние новости</h1>
       <div>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Card to={"/news/1"}/>
+        <Card to={"/news/2"}/>
+        <Card to={"/news/3"}/>
+        <Card to={"/news/4"}/>
+        <Card to={"/news/5"}/>
+        <Card to={"/news/6"}/>
       </div>
     </div>
   )
