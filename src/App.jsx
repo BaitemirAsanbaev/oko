@@ -7,6 +7,7 @@ import Members from "./pages/Members/Members";
 import News from "./pages/News/News";
 import FullNews from "./pages/FullNews/FullNews";
 import Vacancies from "./pages/Vacancies/Vacancies";
+import VacancyInfo from "./pages/VacancyInfo/VacancyInfo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/news/:id" element={<FullNews />} />
           <Route path="/vacancies" element={<Vacancies />} />
+          <Route path="/vacancy/:id" element={<VacancyInfo />} />
         </Routes>
       </Layout>
     </>
