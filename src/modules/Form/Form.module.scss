@@ -1,0 +1,77 @@
+.Form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  gap: 30px;
+
+  h2 {
+    color: #232f66;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  h5 {
+    color: #232f66;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    color: #232f66;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    input {
+      border: 1px solid #232f66;
+      background: #fff;
+      width: 970px;
+      height: 61px;
+      margin: 5px 0;
+      padding: 10px;
+
+      &::placeholder {
+        font-size: 16px;
+        letter-spacing: 1.4px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .btn {
+    border: 1px solid #232f66;
+    border-radius: 60px;
+    background-color: #232f66;
+    color: #fff;
+    width: 272px;
+    height: 55px;
+
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .par {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

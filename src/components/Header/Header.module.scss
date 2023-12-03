@@ -1,0 +1,48 @@
+.Header {
+  display: flex;
+  width: 100%;
+  //   background-color: red;
+  .innerCont {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 20px;
+      width: 507px;
+      h2 {
+        color: #232f66;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      p {
+        color: #232f66;
+        font-family: Montserrat;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      button {
+        border-radius: 32px;
+        background: #232f66;
+        width: 288px;
+        height: 64px;
+        flex-shrink: 0;
+        color: white;
+        border: 1px solid #232f66;
+      }
+    }
+  }
+}
