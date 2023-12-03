@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import Comment from '../../components/Comments/Comment'
+import { Context } from '../../main'
+import SendComment from '../../components/SendComment/SendComment'
+import { observer } from 'mobx-react-lite'
 
-export default function FullNews() {
+export default observer(function FullNews() {
   const params = useParams()
+  const {commentStore} = useContext(Context).stores
   return (
     <div className='page'>
       <h1>News #{params.id}</h1>
@@ -20,15 +24,11 @@ export default function FullNews() {
       Voluptas, est! Repellat assumenda nam a, repellendus dolores autem est tempore sit iusto excepturi fugiat doloremque nulla dolore error quo optio, iure vitae, ratione id sapiente! Nobis molestiae obcaecati ipsam?
       </p>
       <section>
-        <input style={{border:"none", outline:"none", borderBottom:"2px solid #1c274c", padding:"5px 10px", width:"100%"}} type='text' name='comment' id='comment' placeholder='Введите комментарий'/>
-        <span style={{position:"relative", left:"500px", bottom:"35px", cursor:"pointer"}}>Отправить</span>
-        <Comment/>
-        <Comment/>
-        <Comment/>
-        <Comment/>
-        <Comment/>
-        <Comment/>
+        <SendComment/>
+        {commentStore.comments.map((item, id)=>{
+          return<Comment data={item} key={id}/>
+        })}
       </section>
     </div>
   )
-}
+})
