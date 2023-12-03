@@ -63,7 +63,7 @@ const Nav = () => {
           <NavLink>Органы управления</NavLink>
         </li>
         <li>
-          <NavLink>Курсы</NavLink>
+          <NavLink to={"/courses"}>Курсы</NavLink>
         </li>
       </ul>
     </nav>

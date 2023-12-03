@@ -9,6 +9,9 @@ import FullNews from "./pages/FullNews/FullNews";
 import Vacancies from "./pages/Vacancies/Vacancies";
 import VacancyInfo from "./pages/VacancyInfo/VacancyInfo";
 import VacancyForm from "./pages/VacancyForm/VacancyForm";
+import Courses from "./pages/Courses/Courses";
+import CourseInfo from "./pages/CourseInfo/CourseInfo";
+import CourseForm from "./pages/CourseForm/CourseForm";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
           <Route path="/vacancies" element={<Vacancies />} />
           <Route path="/vacancy/:id" element={<VacancyInfo />} />
           <Route path="/vacancy/form" element={<VacancyForm />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/course/:id" element={<CourseInfo />} />
+          <Route path="/course/form" element={<CourseForm />} />
         </Routes>
       </Layout>
     </>
