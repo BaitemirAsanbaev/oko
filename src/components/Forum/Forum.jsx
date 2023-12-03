@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import classes from "./Forum.module.scss";
-import Message from "./Message/Message";
-
+import forum from '../../assets/forum banner.avif'
 const Forum = () => {
   return (
     <div className={classes.Forum}>
@@ -12,17 +11,13 @@ const Forum = () => {
           последних событий
         </p>
       </section>
-      <section className={classes.message_cont}>
-        <Message />
-        <Message />
-
-        <Message />
-
+      <section className={classes.banner}>
+        <img src={forum}/>
       </section>
 
-      <span>
-        <Link to={"/forum"}>Перейти на форум</Link>
-      </span>
+          <Link className={classes.btn} to={"/forum"}>
+            Перейти на форум
+          </Link>
     </div>
   );
 };
