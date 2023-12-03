@@ -5,7 +5,6 @@ import Header from "../../components/Header/Header";
 import Form from "../../components/Form/Form";
 import styles from "./Home.module.scss";
 import {Link} from "react-router-dom";
-import Contacts from "../../components/Contacts/Contacts";
 const Home = () => {
   return (
     <main className={styles.Home}>
@@ -27,9 +26,6 @@ const Home = () => {
       </div>
       <div>
         <Forum />
-      </div>
-      <div>
-        <Contacts/>
       </div>
     </main>
   );

@@ -1,0 +1,36 @@
+.About {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  section {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    *{
+      color: #232f66;
+
+    }
+    p{
+      font-size: 20px;
+    }
+    ul {
+      margin: 30px;
+      li {
+        list-style: circle !important;
+        font-size: 20px;
+        margin: 10px;
+      }
+    }
+    h1 {
+      font-size: 32px;
+      align-self: center;
+      color: #232f66;
+      margin-bottom: 20px;
+    }
+    .cards{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
