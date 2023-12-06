@@ -13,6 +13,7 @@ import Courses from "./pages/Courses/Courses";
 import CourseInfo from "./pages/CourseInfo/CourseInfo";
 import CourseForm from "./pages/CourseForm/CourseForm";
 import SpisokChlenov from "./pages/SpisokChlenov/SpisokChlenov";
+import Auth from "./pages/Auth/Auth";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/course/:id" element={<CourseInfo />} />
           <Route path="/course/form" element={<CourseForm />} />
           <Route path="/reestr/spisok-chlenov" element={<SpisokChlenov />} />
+          <Route path="/auth/" element={<Auth />} />
         </Routes>
       </Layout>
     </>

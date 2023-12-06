@@ -4,7 +4,7 @@ import fb from "../../assets/fb.svg";
 import ig from "../../assets/ig.svg";
 import tg from "../../assets/tg.svg";
 import wa from "../../assets/wa.svg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "../Dropdown/Dropdown";
 const Nav = () => {
   return (
@@ -26,6 +26,9 @@ const Nav = () => {
             <img src={wa} alt="wa" />
           </a>
         </div>
+        <div>
+          <Link to={"/auth"}>Auth</Link>
+        </div>
       </div>
       <ul>
         <li>
@@ -36,7 +39,7 @@ const Nav = () => {
         </li>
         <li>
           <DropdownMenu
-        title={"Члены объединения"}
+            title={"Члены объединения"}
             options={[
               { value: "/members/1", label: "Члены объединения 1" },
               { value: "/members/2", label: "Члены объединения 2" },
@@ -45,20 +48,26 @@ const Nav = () => {
           ></DropdownMenu>
         </li>
         <li>
-        <DropdownMenu
-        title={"Новости"}
+          <DropdownMenu
+            title={"Новости"}
             options={[
               { value: "/news", label: "Новости" },
-              { value: "/vacancies", label: "Вакансии" }
+              { value: "/vacancies", label: "Вакансии" },
             ]}
           ></DropdownMenu>
         </li>
         <li>
-        <DropdownMenu
-        title={"____Реестр____"}
+          <DropdownMenu
+            title={"____Реестр____"}
             options={[
-              { value: "/reestr/spisok-chlenov", label: "Список членов объединения" },
-              { value: "/reestr/slps", label: "Список людей получивших сертификат" },
+              {
+                value: "/reestr/spisok-chlenov",
+                label: "Список членов объединения",
+              },
+              {
+                value: "/reestr/slps",
+                label: "Список людей получивших сертификат",
+              },
               { value: "/reestr/sok", label: "Список оценочных компаний" },
               { value: "/reestr/soip", label: "Список оценщиков ИП" },
             ]}

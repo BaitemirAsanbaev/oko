@@ -1,0 +1,58 @@
+/* Auth.module.scss */
+
+.Auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 50px;
+
+  label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    div {
+      margin-bottom: 5px;
+    color:#1c274c;
+
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1c274c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #4f5c88;
+    }
+
+    &:first-of-type{
+      margin-bottom: 10px;
+      background-color: #1c4c3a;
+
+      &:hover {
+        background-color: #4f5c88;
+      }
+    }
+  }
+}
