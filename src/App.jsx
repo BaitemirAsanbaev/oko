@@ -12,9 +12,12 @@ import VacancyForm from "./pages/VacancyForm/VacancyForm";
 import Courses from "./pages/Courses/Courses";
 import CourseInfo from "./pages/CourseInfo/CourseInfo";
 import CourseForm from "./pages/CourseForm/CourseForm";
-import SpisokChlenov from "./pages/SpisokChlenov/SpisokChlenov";
 import Auth from "./pages/Auth/Auth";
-
+import SpisokChlenov from "./pages/reestr/SpisokChlenov/SpisokChlenov";
+import SLPS from "./pages/reestr/SLPS/SLPS";
+import SOK from "./pages/reestr/SOK/SOK";
+import SOIP from "./pages/reestr/SOIP/SOIP";
+import NPA from "./pages/NPA/NPA";
 function App() {
   return (
     <>
@@ -31,7 +34,11 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/course/:id" element={<CourseInfo />} />
           <Route path="/course/form" element={<CourseForm />} />
-          <Route path="/reestr/spisok-chlenov" element={<SpisokChlenov />} />
+          <Route path="/reestr/spisok-chlenov" element={<SpisokChlenov/>} />
+          <Route path="/reestr/slps" element={<SLPS/>} />
+          <Route path="/reestr/sok" element={<SOK/>} />
+          <Route path="/reestr/soip" element={<SOIP/>} />
+          <Route path="/npa" element={<NPA/>} />
           <Route path="/auth/" element={<Auth />} />
         </Routes>
       </Layout>

@@ -1,23 +1,21 @@
-import React from "react";
-import Card from "../../components/Card/Card";
 
-export default function SpisokChlenov() {
+export default function SOIP() {
   return (
     <div className="page">
-      <h1>Список членов объединения</h1>
+      <h1>Список оценочных ИП</h1>
       <ul>
         <li>
-          <a href="#pochetnye">Почетные</a>
+          <a href="#comp1">Nur Telecom</a>
         </li>
         <li>
-          <a href="#deistvitelnye">Действительные</a>
+          <a href="#">CocaCola</a>
         </li>
         <li>
-          <a href="#associirovanye">Ассоциированные</a>
+          <a href="#comp3">Avangard</a>
         </li>
       </ul>
-      <p id="pochetnye">
-        <b>Почетные</b> ipsum dolor sit amet consectetur, adipisicing elit.
+      <p id="comp1">
+        <b>Nur Telecom</b> ipsum dolor sit amet consectetur, adipisicing elit.
         Neque vero corrupti odit? Accusamus quisquam eaque inventore ab
         consectetur, repellendus facilis in, fugiat sed, cum dolor officia porro
         saepe eveniet corporis. Asperiores sequi omnis id sapiente hic earum.
@@ -37,8 +35,8 @@ export default function SpisokChlenov() {
         sapiente, beatae dolore. Esse fuga excepturi quis distinctio cupiditate
         nemo veniam exercitationem quas deserunt.
       </p>
-      <p id="deistvitelnye">
-        <b>Действительные</b> ipsum dolor sit amet consectetur, adipisicing
+      <p id="comp2">
+        <b>CocaCola</b> ipsum dolor sit amet consectetur, adipisicing
         elit. Neque vero corrupti odit? Accusamus quisquam eaque inventore ab
         consectetur, repellendus facilis in, fugiat sed, cum dolor officia porro
         saepe eveniet corporis. Asperiores sequi omnis id sapiente hic earum.
@@ -58,8 +56,8 @@ export default function SpisokChlenov() {
         sapiente, beatae dolore. Esse fuga excepturi quis distinctio cupiditate
         nemo veniam exercitationem quas deserunt.
       </p>
-      <p id="associirovanye">
-        <b>Ассоциированные</b> ipsum dolor sit amet consectetur, adipisicing
+      <p id="comp3">
+        <b>Avangard</b> ipsum dolor sit amet consectetur, adipisicing
         elit. Neque vero corrupti odit? Accusamus quisquam eaque inventore ab
         consectetur, repellendus facilis in, fugiat sed, cum dolor officia porro
         saepe eveniet corporis. Asperiores sequi omnis id sapiente hic earum.
@@ -79,18 +77,6 @@ export default function SpisokChlenov() {
         sapiente, beatae dolore. Esse fuga excepturi quis distinctio cupiditate
         nemo veniam exercitationem quas deserunt.
       </p>
-      <div style={{
-        display:"flex",
-        flexWrap:"wrap",
-        justifyContent:"space-around"
-      }}>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-      </div>
     </div>
   );
 }

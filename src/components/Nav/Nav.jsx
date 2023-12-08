@@ -74,7 +74,7 @@ const Nav = () => {
           ></DropdownMenu>
         </li>
         <li>
-          <NavLink>НПА</NavLink>
+          <NavLink to={"/npa"}>НПА</NavLink>
         </li>
         <li>
           <NavLink>Органы управления</NavLink>
