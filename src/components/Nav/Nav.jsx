@@ -77,7 +77,7 @@ const Nav = () => {
           <NavLink to={"/npa"}>НПА</NavLink>
         </li>
         <li>
-          <NavLink>Органы управления</NavLink>
+          <NavLink to={"/organs"}>Органы управления</NavLink>
         </li>
         <li>
           <NavLink to={"/courses"}>Курсы</NavLink>
