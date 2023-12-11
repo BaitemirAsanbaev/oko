@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import classes from "./Auth.module.scss";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate()
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -19,6 +20,9 @@ export default function Auth() {
     const res = await axios.post('http://localhost:8083/auth', {email, password})
     localStorage.setItem("access", res.data.access_token);
     localStorage.setItem("refresh", res.data.refresh_token);
+    localStorage.setItem("email", email);
+    navigate('/')
+    location.reload()
   };
 
   const handleSignUp = async (e) => {
@@ -26,6 +30,9 @@ export default function Auth() {
     const res = await axios.post('http://localhost:8083/register', {email, password})
     localStorage.setItem("access", res.data.access_token);
     localStorage.setItem("refresh", res.data.refresh_token);
+    localStorage.setItem("email", email);
+    navigate('/')
+    location.reload()
   };
 
   return (

@@ -7,6 +7,10 @@ import wa from "../../assets/wa.svg";
 import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "../Dropdown/Dropdown";
 const Nav = () => {
+  async function logout(){
+    localStorage.clear()
+    location.reload()
+  }
   return (
     <nav className={styles.Nav}>
       <div>
@@ -27,7 +31,11 @@ const Nav = () => {
           </a>
         </div>
         <div>
-          <Link to={"/auth"}>Auth</Link>
+          {localStorage.getItem("access") ? (
+            <Link onClick={logout} to={"/"}>Logout</Link>
+          ) : (
+            <Link to={"/auth"}>Auth</Link>
+          )}
         </div>
       </div>
       <ul>
