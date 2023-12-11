@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classes from "./Auth.module.scss";
+import axios from 'axios';
 
 export default function Auth() {
   const [email, setEmail] = useState('');
@@ -13,16 +14,18 @@ export default function Auth() {
     setPassword(e.target.value);
   };
 
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
-    // Add logic for signing in using the email and password state values
-    console.log('Signing in with:', email, password);
+    const res = await axios.post('http://localhost:8083/auth', {email, password})
+    localStorage.setItem("access", res.data.access_token);
+    localStorage.setItem("refresh", res.data.refresh_token);
   };
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
-    // Add logic for signing up using the email and password state values
-    console.log('Signing up with:', email, password);
+    const res = await axios.post('http://localhost:8083/register', {email, password})
+    localStorage.setItem("access", res.data.access_token);
+    localStorage.setItem("refresh", res.data.refresh_token);
   };
 
   return (
