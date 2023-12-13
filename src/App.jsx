@@ -19,6 +19,7 @@ import SOK from "./pages/reestr/SOK/SOK";
 import SOIP from "./pages/reestr/SOIP/SOIP";
 import NPA from "./pages/NPA/NPA";
 import Organs from "./pages/Organs/Organs";
+import Forum from "./pages/Forum/Forum";
 function App() {
   return (
     <>
@@ -41,6 +42,7 @@ function App() {
           <Route path="/reestr/soip" element={<SOIP/>} />
           <Route path="/npa" element={<NPA/>} />
           <Route path="/organs" element={<Organs/>} />
+          <Route path="/forum" element={<Forum/>} />
           <Route path="/auth/" element={<Auth />} />
         </Routes>
       </Layout>
