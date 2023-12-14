@@ -51,7 +51,3 @@ function App() {
 }
 
 export default App;
-
-const Hello2 = () => {
-  return <h1>Hello</h1>;
-};
