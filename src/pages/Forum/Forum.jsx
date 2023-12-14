@@ -19,20 +19,22 @@ function Forum() {
     } catch (e) {
       console.log(e.message);
     } finally {
-      setMessages([...messages, comment]);
+      setMessages([...messages, {text:comment, user:{email:localStorage.getItem("email")}}]);
+      setComment("")
     }
   }
   async function getMessages() {
     try {
       const res = await axios.get("http://localhost:8083/user/comment/getAll");
       setMessages(res.data);
+      console.log(res.data[0].user.email);
     } catch (e) {
       console.log(e.message);
     }
   }
   useEffect(() => {
     getMessages();
-  }, [messages, comment]);
+  }, [comment]);
   return (
     <div className={`page ${classes.Forum}`}>
       <div>
@@ -45,6 +47,7 @@ function Forum() {
           })}
         </div>
         <input
+        value={comment}
           type="text"
           name="comment"
           id="comment"
