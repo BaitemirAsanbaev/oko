@@ -1,10 +1,10 @@
-import Card from "../../components/Card/Card";
-import Forum from "../../components/Forum/Forum";
-import Gallery from "../../components/Gallery/Gallery";
-import Header from "../../components/Header/Header";
-import Form from "../../components/Form/Form";
-import styles from "./Home.module.scss";
-import {Link} from "react-router-dom";
+import Card from '../../components/Card/Card';
+import Forum from '../../components/Forum/Forum';
+import Gallery from '../../components/Gallery/Gallery';
+import Header from '../../components/Header/Header';
+import Form from '../../components/Form/Form';
+import styles from './Home.module.scss';
+import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <main className={styles.Home}>
@@ -16,7 +16,9 @@ const Home = () => {
           <Card />
           <Card />
         </div>
-        <Link to={"news"} className={styles.more}>Показать больше</Link>
+        <Link to={'news'} className={styles.more}>
+          Показать больше
+        </Link>
       </section>
       <div>
         <Form />
