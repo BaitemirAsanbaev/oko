@@ -7,15 +7,15 @@ export default function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const handleEmailChange = (e) => {
+  const EmailINP = (e) => {
     setEmail(e.target.value);
   };
 
-  const handlePasswordChange = (e) => {
+  const PasswordINP = (e) => {
     setPassword(e.target.value);
   };
 
-  const handleSignIn = async (e) => {
+  const SignIn = async (e) => {
     e.preventDefault();
     const res = await axios.post('http://localhost:8083/auth', { email, password });
     localStorage.setItem('access', res.data.access_token);
@@ -25,7 +25,7 @@ export default function Auth() {
     location.reload();
   };
 
-  const handleSignUp = async (e) => {
+  const SignUp = async (e) => {
     e.preventDefault();
     const res = await axios.post('http://localhost:8083/register', { email, password });
     localStorage.setItem('access', res.data.access_token);
@@ -40,14 +40,14 @@ export default function Auth() {
       <form className={classes.Auth}>
         <label>
           <div>Почта</div>
-          <input type="email" value={email} onChange={handleEmailChange} />
+          <input type="email" value={email} onChange={EmailINP} />
         </label>
         <label>
           <div>Пароль</div>
-          <input type="password" value={password} onChange={handlePasswordChange} />
+          <input type="password" value={password} onChange={PasswordINP} />
         </label>
-        <button onClick={handleSignIn}>Sign in</button>
-        <button onClick={handleSignUp}>Sign up</button>
+        <button onClick={SignIn}>Sign in</button>
+        <button onClick={SignUp}>Sign up</button>
       </form>
     </div>
   );
