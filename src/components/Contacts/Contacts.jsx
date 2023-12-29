@@ -1,8 +1,8 @@
-import React from "react";
-import classes from "./Contacts.module.scss";
-import phone from '../../assets/phone.svg'
-import adress from '../../assets/adress.svg'
-import navigate from '../../assets/navigate.svg'
+import React from 'react';
+import classes from './Contacts.module.scss';
+import phone from '../../assets/phone.svg';
+import adress from '../../assets/adress.svg';
+import navigate from '../../assets/navigate.svg';
 export default function Contacts() {
   return (
     <div className={classes.Contacts}>
@@ -19,14 +19,13 @@ export default function Contacts() {
             </div>
           </li>
           <li>
-          <img src={adress} alt="adress" />
+            <img src={adress} alt="adress" />
             <div>Loft Pineapple, 22 New Green Street, New York </div>
           </li>
           <li>
-          <img src={navigate} alt="navigate" />
+            <img src={navigate} alt="navigate" />
             <div>
-              We are located in the northern part of the city. The nearest
-              subway is the North Road.
+              We are located in the northern part of the city. The nearest subway is the North Road.
             </div>
           </li>
         </ul>
@@ -38,8 +37,7 @@ export default function Contacts() {
           height="450"
           allowFullScreen=""
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+          referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   );

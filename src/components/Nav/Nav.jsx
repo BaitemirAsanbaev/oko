@@ -1,15 +1,15 @@
-import styles from "./Nav.module.scss";
-import logo from "../../assets/logo.png";
-import fb from "../../assets/fb.svg";
-import ig from "../../assets/ig.svg";
-import tg from "../../assets/tg.svg";
-import wa from "../../assets/wa.svg";
-import { Link, NavLink } from "react-router-dom";
-import DropdownMenu from "../Dropdown/Dropdown";
+import styles from './Nav.module.scss';
+import logo from '../../assets/logo.png';
+import fb from '../../assets/fb.svg';
+import ig from '../../assets/ig.svg';
+import tg from '../../assets/tg.svg';
+import wa from '../../assets/wa.svg';
+import { Link, NavLink } from 'react-router-dom';
+import DropdownMenu from '../Dropdown/Dropdown';
 const Nav = () => {
-  async function logout(){
-    localStorage.clear()
-    location.reload()
+  async function logout() {
+    localStorage.clear();
+    location.reload();
   }
   return (
     <nav className={styles.Nav}>
@@ -20,75 +20,74 @@ const Nav = () => {
           <a href="#">
             <img src={fb} alt="fb" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/smv.ree/">
             <img src={ig} alt="ig" />
           </a>
-          <a href="#">
+          <a href="https://t.me/smv_ree">
             <img src={tg} alt="tg" />
           </a>
-          <a href="#">
+          <a href="https://wa.me/996999960511">
             <img src={wa} alt="wa" />
           </a>
         </div>
         <div>
-          {localStorage.getItem("access") ? (
-            <Link onClick={logout} to={"/"}>Logout</Link>
+          {localStorage.getItem('access') ? (
+            <Link onClick={logout} to={'/'}>
+              Logout
+            </Link>
           ) : (
-            <Link to={"/auth"}>Auth</Link>
+            <Link to={'/auth'}>authorization/registration</Link>
           )}
         </div>
       </div>
       <ul>
         <li>
-          <NavLink to={"/"}>Главная страница</NavLink>
+          <NavLink to={'/'}>Главная страница</NavLink>
         </li>
         <li>
-          <NavLink to={"/about"}>О нас</NavLink>
+          <NavLink to={'/about'}>О нас</NavLink>
         </li>
         <li>
           <DropdownMenu
-            title={"Члены объединения"}
+            title={'Члены объединения'}
             options={[
-              { value: "/members/1", label: "Члены объединения 1" },
-              { value: "/members/2", label: "Члены объединения 2" },
-              { value: "/members/3", label: "Члены объединения 3" },
-            ]}
-          ></DropdownMenu>
+              { value: '/members/1', label: 'Члены объединения 1' },
+              { value: '/members/2', label: 'Члены объединения 2' },
+              { value: '/members/3', label: 'Члены объединения 3' },
+            ]}></DropdownMenu>
         </li>
         <li>
           <DropdownMenu
-            title={"Новости"}
+            title={'Новости'}
             options={[
-              { value: "/news", label: "Новости" },
-              { value: "/vacancies", label: "Вакансии" },
-            ]}
-          ></DropdownMenu>
+              { value: '/news', label: 'Новости' },
+              { value: '/vacancies', label: 'Вакансии' },
+            ]}></DropdownMenu>
         </li>
         <li>
           <DropdownMenu
-            title={"____Реестр____"}
+            title={'____Реестр____'}
             options={[
               {
-                value: "/reestr/spisok-chlenov",
-                label: "Список членов объединения",
+                value: '/reestr/spisok-chlenov',
+                label: 'Список членов объединения',
               },
               {
-                value: "/reestr/slps",
-                label: "Список людей получивших сертификат",
+                value: '/reestr/slps',
+                label: 'Список людей получивших сертификат',
               },
-              { value: "/reestr/sok", label: "Список оценочных компаний" },
-              { value: "/reestr/soip", label: "Список оценщиков ИП" },
-            ]}
-          ></DropdownMenu>
+              { value: '/reestr/sok', label: 'Список оценочных компаний' },
+              { value: '/reestr/soip', label: 'Список оценщиков ИП' },
+            ]}></DropdownMenu>
         </li>
         <li>
-          <NavLink to={"/npa"}>НПА</NavLink>
+          <NavLink to={'/npa'}>НПА</NavLink>
         </li>
         <li>
-          <NavLink to={"/organs"}>Органы управления</NavLink>
+          <NavLink to={'/organs'}>Органы управления</NavLink>
         </li>
         <li>
-          <NavLink to={"/courses"}>Курсы</NavLink>
+          <NavLink to={'/courses'}>Курсы</NavLink>
         </li>
       </ul>
     </nav>

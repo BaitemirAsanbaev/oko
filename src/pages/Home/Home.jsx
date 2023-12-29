@@ -12,9 +12,9 @@ const Home = () => {
       <section className={styles.cards}>
         <h2>Последние новости </h2>
         <div>
-          <Card />
-          <Card />
-          <Card />
+          <Card to={'/news/1'} />
+          <Card to={'/news/2'} />
+          <Card to={'/news/3'} />
         </div>
         <Link to={'news'} className={styles.more}>
           Показать больше
