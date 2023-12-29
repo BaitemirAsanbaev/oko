@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import img from "../../assets/card1.png";
-import styles from "./Card.module.scss";
-const Card = ({to}) => {
+import { Link } from 'react-router-dom';
+import img from '../../assets/card1.png';
+import styles from './Card.module.scss';
+const Card = ({ to }) => {
   return (
     <article className={styles.Card}>
       <img src={img} alt="card image" />

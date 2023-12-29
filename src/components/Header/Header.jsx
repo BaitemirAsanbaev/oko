@@ -1,5 +1,5 @@
-import styles from "./Header.module.scss";
-import img from "../../assets/header.png";
+import styles from './Header.module.scss';
+import img from '../../assets/header.png';
 
 const Header = () => {
   return (
@@ -8,11 +8,12 @@ const Header = () => {
         <div>
           <h2>Хочешь стать частью команды? </h2>
           <p>
-            Работа в оценочной компании может быть финансово выгодной. Спрос на
-            квалифицированных оценщиков может быть высоким, и оценщики могут
-            получать хорошую оплату за свои услуги.
+            Работа в оценочной компании может быть финансово выгодной. Спрос на квалифицированных
+            оценщиков может быть высоким, и оценщики могут получать хорошую оплату за свои услуги.
           </p>
-          <button>Присоединяйся!</button>
+          <a href="/forum/">
+            <button type="submit">Присоединяйся!</button>
+          </a>
         </div>
         <article>
           <img src={img} alt="header image" />
